@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>edgeless.technology - Replace this with a short page description</title>
+  <link rel="icon" href="icon.png" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-bg: #fdfaf6;
+      --color-ink: #2b2220;
+      --color-muted: #7a6a62;
+      --color-faint: #a8998f;
+      --color-line: #eaded6;
+      --color-accent: #c2412f;        /* warm red: hover and highlight */
+      --color-accent-deep: #8f4a86;   /* mauve: links */
+      --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      --font-sans: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      --font-mono: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    }
+    ::selection { background: rgb(229 83 47 / .18); }
+  </style>
+
+  <!-- Pale watercolor background: warm color field with melting squares, plus a pale 'e' watermark.
+       Both sit behind the page and move at different speeds as you scroll (see the script at the bottom). -->
+  <style>
+    .pw-layer { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
+    .pw-wash {
+      background: url("assets/bg-technology-pale.webp") repeat-y center top / max(100%, 900px) auto;
+      mix-blend-mode: multiply;
+    }
+    .pw-e {
+      background: url("assets/e-watermark-technology-pale.webp") no-repeat 78% 50% / min(95vmin, 900px) auto;
+      will-change: transform;
+    }
+    @media (max-width: 700px) {
+      .pw-e { background-position: 50% 45%; background-size: min(120vw, 700px) auto; }
+    }
+    /* lets the white edges of the logo picture blend into the wash */
+    .image-section img {
+      mix-blend-mode: multiply; filter: brightness(1.04);
+      -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent), linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent);
+      -webkit-mask-composite: source-in;
+      mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent), linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent);
+      mask-composite: intersect;
+    }
+  </style>
+</head>
+<body class="m-0 bg-bg font-serif text-base leading-normal text-ink antialiased">
+  <div class="pw-layer pw-wash" aria-hidden="true"></div>
+  <div class="pw-layer pw-e" aria-hidden="true"></div>
+
+  <!-- ================= header ================= -->
+  <header class="sticky top-0 z-10 border-b border-line bg-bg">
+    <div class="mx-auto flex max-w-4xl flex-wrap items-baseline justify-between gap-x-3 gap-y-1 px-6 py-2.5">
+      <a class="font-serif text-lg font-semibold no-underline text-ink" href="#top">edgeless<span class="text-muted">.technology</span></a>
+      <nav class="flex flex-wrap gap-x-4 gap-y-1 text-sm" aria-label="Page sections">
+        <a class="no-underline text-muted hover:text-accent hover:underline" href="#overview">Overview</a>
+        <a class="no-underline text-muted hover:text-accent hover:underline" href="#projects">Projects</a>
+        <a class="no-underline text-muted hover:text-accent hover:underline" href="#resources">Resources</a>
+        <a class="no-underline text-muted hover:text-accent hover:underline" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= intro ================= -->
+  <section class="pt-10 pb-8 max-md:pt-8 max-md:pb-6" id="top">
+    <div class="mx-auto max-w-4xl px-6">
+      <h1 class="mb-4 font-serif text-4xl font-semibold leading-tight text-ink md:text-5xl">Your page headline goes here.</h1>
+      <p class="mb-4 max-w-prose text-lg text-muted">
+        Replace this with a short introduction of one to three sentences. It sits under the headline and says what this site is about.
+      </p>
+
+      <ul class="mt-5 list-disc space-y-1.5 pl-5 text-sm text-muted marker:text-faint">
+        <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a> — A short description of this item.</li>
+        <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a> — A short description of this item.</li>
+        <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a> — A short description of this item.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= overview ================= -->
+  <section class="py-8 max-md:py-6" id="overview">
+    <div class="mx-auto max-w-4xl px-6">
+      <h2 class="mb-3 font-serif text-2xl font-semibold leading-tight text-ink md:text-3xl">Section title</h2>
+      <p class="m-0 max-w-prose text-muted">
+        Replace this with a short description of this section, one to three sentences.
+      </p>
+
+      <ul class="mt-4 list-disc space-y-1.5 pl-5 text-sm text-muted marker:text-faint">
+        <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a> — A short description of this item.</li>
+        <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a> — A short description of this item.</li>
+        <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a> — A short description of this item.</li>
+        <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a> — A short description of this item.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= projects: two columns, each with its own short description and list ================= -->
+  <section class="py-8 max-md:py-6" id="projects">
+    <div class="mx-auto max-w-4xl px-6">
+      <h2 class="mb-3 font-serif text-2xl font-semibold leading-tight text-ink md:text-3xl">Section title with groups</h2>
+      <p class="m-0 max-w-prose text-muted">
+        Replace this with a short description of this section. Each group below has its own heading, short description and list.
+      </p>
+
+      <div class="mt-4 grid gap-x-6 gap-y-4 min-[720px]:grid-cols-2 min-[720px]:items-start">
+        <div class="pt-2 text-sm">
+          <h3 class="mb-1 font-serif text-lg font-semibold leading-tight text-ink">Group name</h3>
+          <p class="m-0 text-muted">A short description of this group.</p>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-muted marker:text-faint">
+            <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a></li>
+            <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a></li>
+            <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a></li>
+          </ul>
+        </div>
+        <div class="pt-2 text-sm">
+          <h3 class="mb-1 font-serif text-lg font-semibold leading-tight text-ink">Group name</h3>
+          <p class="m-0 text-muted">A short description of this group.</p>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-muted marker:text-faint">
+            <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a></li>
+            <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a></li>
+            <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a></li>
+          </ul>
+        </div>
+        <div class="pt-2 text-sm">
+          <h3 class="mb-1 font-serif text-lg font-semibold leading-tight text-ink">Group name</h3>
+          <p class="m-0 text-muted">A short description of this group.</p>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-muted marker:text-faint">
+            <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a></li>
+            <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a></li>
+            <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a></li>
+          </ul>
+        </div>
+        <div class="pt-2 text-sm">
+          <h3 class="mb-1 font-serif text-lg font-semibold leading-tight text-ink">Group name</h3>
+          <p class="m-0 text-muted">A short description of this group.</p>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-muted marker:text-faint">
+            <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a></li>
+            <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a></li>
+            <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= resources: three columns ================= -->
+  <section class="py-8 max-md:py-6" id="resources">
+    <div class="mx-auto max-w-4xl px-6">
+      <h2 class="mb-3 font-serif text-2xl font-semibold leading-tight text-ink md:text-3xl">Section title with three columns</h2>
+      <p class="m-0 max-w-prose text-muted">
+        Replace this with a short description of this section.
+      </p>
+
+      <div class="mt-5 grid gap-4 min-[720px]:grid-cols-3">
+        <article class="pt-3">
+          <h3 class="mb-1.5 font-serif text-xl font-semibold leading-tight text-ink">Column title</h3>
+          <p class="mb-2 text-sm text-muted">A short description of this column.</p>
+          <ul class="list-disc space-y-1 pl-5 text-sm text-muted marker:text-faint">
+            <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a></li>
+            <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a></li>
+            <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a></li>
+          </ul>
+        </article>
+        <article class="pt-3">
+          <h3 class="mb-1.5 font-serif text-xl font-semibold leading-tight text-ink">Column title</h3>
+          <p class="mb-2 text-sm text-muted">A short description of this column.</p>
+          <ul class="list-disc space-y-1 pl-5 text-sm text-muted marker:text-faint">
+            <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a></li>
+            <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a></li>
+            <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a></li>
+          </ul>
+        </article>
+        <article class="pt-3">
+          <h3 class="mb-1.5 font-serif text-xl font-semibold leading-tight text-ink">Column title</h3>
+          <p class="mb-2 text-sm text-muted">A short description of this column.</p>
+          <ul class="list-disc space-y-1 pl-5 text-sm text-muted marker:text-faint">
+            <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a></li>
+            <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a></li>
+            <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= contact ================= -->
+  <section class="py-8 max-md:py-6" id="contact">
+    <div class="mx-auto max-w-4xl px-6">
+      <h2 class="mb-3 font-serif text-2xl font-semibold leading-tight text-ink md:text-3xl">Contact</h2>
+      <p class="m-0 max-w-prose text-muted">
+        Replace this with a short note on how to get in touch.
+      </p>
+
+      <ul class="mt-4 list-disc space-y-3 pl-5 text-sm text-muted marker:text-faint">
+        <li><strong>Email:</strong> <a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="mailto:you@example.com">you@example.com</a></li>
+        <li><strong>Another way to reach you:</strong> <a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Link name</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!--
+    ================= SECTION TEMPLATE (copy this block to add a section) =================
+    1. Copy everything from the opening <section ...> to the closing </section> below.
+    2. Paste it above the logo section, give it a new id, and change the title and text.
+    3. To add it to the menu, add a link with the same id to the <nav> in the header.
+    4. Add or delete <li> lines to change the list. Each item name is a link.
+
+  <section class="py-8 max-md:py-6" id="new-section">
+    <div class="mx-auto max-w-4xl px-6">
+      <h2 class="mb-3 font-serif text-2xl font-semibold leading-tight text-ink md:text-3xl">Section title</h2>
+      <p class="m-0 max-w-prose text-muted">A short description of this section.</p>
+      <ul class="mt-4 list-disc space-y-1.5 pl-5 text-sm text-muted marker:text-faint">
+        <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#">Item name</a> — A short description of this item.</li>
+      </ul>
+    </div>
+  </section>
+  -->
+
+  <!-- =============== logo ========== -->
+  <section class="image-section py-8 max-md:py-6">
+    <div class="mx-auto max-w-4xl px-6 text-center">
+      <img src="assets/technology_colormark_wordmark_web.jpg" alt="edgeless.technology logo" class="mx-auto h-auto w-full max-w-lg">
+    </div>
+  </section>
+
+  <!-- ================= footer ================= -->
+  <footer class="border-t border-line pt-4 pb-6 text-sm text-faint">
+    <div class="mx-auto flex max-w-4xl flex-wrap justify-between gap-x-5 gap-y-1 px-6">
+      <span>edgeless.technology — Replace this with a short tagline</span>
+      <span><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="#top">back to top ↑</a></span>
+    </div>
+  </footer>
+
+  <script>
+    // Highlight the nav link of the section currently in view.
+    (function () {
+      var links = document.querySelectorAll('nav a[href^="#"]');
+      var map = {};
+      links.forEach(function (a) {
+        map[a.getAttribute('href').slice(1)] = a;
+      });
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            for (var k in map) {
+              map[k].style.color = '';
+              map[k].style.textDecorationLine = '';
+            }
+            var a = map[e.target.id];
+            if (a) {
+              a.style.color = 'var(--color-accent)';
+              a.style.textDecorationLine = 'underline';
+            }
+          }
+        });
+      }, { rootMargin: '-40% 0px -55% 0px' });
+      Object.keys(map).forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) obs.observe(el);
+      });
+    })();
+  </script>
+
+  <!-- Parallax: the wash scrolls at half the speed of the page and the 'e' drifts slowly -->
+  <script>
+    (function () {
+      var wash = document.querySelector('.pw-wash');
+      var mark = document.querySelector('.pw-e');
+      if (!wash || !mark) return;
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var WASH_SPEED = 0.5;  // 0 = fixed, 1 = moves with the page
+      var E_TRAVEL = 260;    // pixels the e drifts from the top to the bottom of the page
+      var ticking = false;
+      function update() {
+        var y = window.scrollY || window.pageYOffset;
+        var max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var p = Math.min(1, Math.max(0, y / max));
+        wash.style.backgroundPosition = 'center ' + (-y * WASH_SPEED) + 'px';
+        mark.style.transform = 'translate3d(0,' + ((0.5 - p) * E_TRAVEL) + 'px,0)';
+        ticking = false;
+      }
+      function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      update();
+    })();
+  </script>
+</body>
+</html>
