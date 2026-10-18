@@ -21,6 +21,10 @@
       --font-mono: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
     }
     ::selection { background: rgb(229 83 47 / .18); }
+
+    html { font-size: 100%; }
+@media (min-width: 768px) { html { font-size: 112.5%; } }
+    
   </style>
 
   <!-- Pale watercolor background: warm color field with melting squares, plus a pale 'e' watermark.
@@ -71,8 +75,8 @@
     <div class="mx-auto max-w-4xl px-6">
       <h1 class="mb-4 font-serif text-4xl font-semibold leading-tight text-ink md:text-5xl">Edgeless - Technologies for Flexible, Independent Communities.</h1>
       <p class="mb-4 max-w-prose text-lg text-muted">
-        This is a curated list of community-focused relay server packages and compatible clients (to run locally or on the web), as well as a list of paid service providers
-        that support edgeless communities. To learn more about edgeless communities or to schedule a session, visit <a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="https://edgeless.social">Edgeless.social</a>
+        This is a curated list of community-focused relay server packages, compatible client-side software, and edgeless tools that support edgeless communities. We also maintain a list of paid service providers capable of integrating with edgeless communities.
+        To learn more about edgeless communities, or to schedule a session, visit <a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="https://edgeless.social">Edgeless.social</a>
       </p>
     </div>
   </section>
@@ -110,7 +114,7 @@
           <p class="m-0 text-muted">Make your community available through any browser. You can easily run some of these yourself, while others utilize a more generalized interface.</p>
           <ul class="mt-2 list-disc space-y-1 pl-5 text-muted marker:text-faint">
             <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="https://hallway-deployer.fiatjaf.com/">Hallway</a> — Create a highly personalized client for your community with ease. Fill out a guided form for themes, branding, custom feeds, safe user settings, and more. Smart defaults allow you to get started right away. Bring your client online and customize the URL through an easy-to-use 3rd party cloud computing service.</li>
-            <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="https://github.com/CodyTseng/jumble/blob/master/README.md#community-mode-optional">Jumble - Community Mode</a> — Customize the popular Nostr client, Jumble, to build a community with strict guardrails. Add one file to the code and launch through a cloud computing service of your choice.</li>
+            <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="https://github.com/CodyTseng/jumble/blob/master/README.md#community-mode-optional">Jumble - Community Mode</a> — Customize the popular nostr client, Jumble, to build a community with strict guardrails. Add one file to the code and launch through a cloud computing service of your choice.</li>
             <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="https://app.flotilla.social/">Flotilla</a> — Full feature group chat client with voice and video rooms, to connect with your community. Easily share links to your community's relay server so members can simply sign in and chat or request to join.</li>
             <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="https://web.nostrord.com/">Nostrord</a> — Light and fast full feature group chats. Connect your community and invite members straight into the conversation.</li>
             <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="https://github.com/dtonon/squalk/blob/master/README.md">Squalk</a> — Create custom forums with topics and chats for your community.</li>
@@ -128,7 +132,7 @@
         </div>
         <div class="pt-2 text-sm">
           <h3 class="mb-1 font-serif text-lg font-semibold leading-tight text-ink">Android</h3>
-          <p class="m-0 text-muted">All web apps listed above work in a mobile browser, but there are some native Android apps available, too.</p>
+          <p class="m-0 text-muted">All web apps listed above work in a mobile browser, but there are edgeless-compatible native Android apps available, too.</p>
           <ul class="mt-2 list-disc space-y-1 pl-5 text-muted marker:text-faint">
             <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="https://zapstore.dev/apps/com.verdana.app">Verdana</a> — Composable configurations via nApps, available on the go.</li>
             <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="https://zapstore.dev/apps/tools.relay.relaytools">Relay Tools - Android</a> — Members can easily plug into your community's social feeds to browse, post, and comment.</li>
@@ -181,7 +185,7 @@
         </article>
         <article class="mb-4 break-inside-avoid pt-3">
           <h3 class="mb-1.5 font-serif text-xl font-semibold leading-tight text-ink">Member Assistance</h3>
-          <p class="mb-2 text-sm text-muted">Apps and resources to help your members get started with Nostr.</p>
+          <p class="mb-2 text-sm text-muted">Apps and resources to help your members get started.</p>
           <ul class="list-disc space-y-1 pl-5 text-sm text-muted marker:text-faint">
             <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="https://nstart.me">nStart</a> — Create custom links for new users, with identity creation, basic key management tutorials, and custom follow lists. </li>
             <li><a class="text-accent-deep hover:text-accent decoration-1 underline-offset-3" href="https://communitator.basspistol.org/">Communitator</a> — Create custom links that effortlessly set a new community member's configurations for their inboxes, outboxes, and media servers. </li>
