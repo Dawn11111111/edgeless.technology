@@ -13,4 +13,7 @@ This is a curated list of community-focused relay server packages, compatible cl
 ### THANKS! 
 
 ![edgeless.technology](https://edgeless.technology/assets/technology_colormark_wordmark_web.jpg)
+
+
+## For more information about edgeless communities, visit: [Edgeless.social](https://edgeless.social)
   
