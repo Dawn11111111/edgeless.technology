@@ -19,8 +19,8 @@ This is a curated list of community-focused relay server packages, compatible cl
   - Available customer service for any suggested service providers
 - PRs for software and service listings will not be accepted without prior review.
 - Fixes will be accepted for typos & grammatical errors.
-- If you wish to contribute further, please comment or reach out.
-- If your project is listed, but you would prefer it not be, please reach out or submit a removal PR.
+- If you wish to contribute further, to discuss partnerships, or you have any other inquiries, please comment or reach to me out [here](https://njump.me/npub1cgcwm56v5hyrrzl5ty4vq4kdud63n5u4czgycdl2r3jshzk55ufqe52ndy).
+- If your project is listed, but you would prefer it not be, please reach out or submit a removal PR and we'll get things rectified asap.
 
 ### THANKS! 
 
