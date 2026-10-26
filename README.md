@@ -3,7 +3,7 @@
 This is a curated list of community-focused relay server packages, compatible client-side software, and edgeless tools that support edgeless communities. We also maintain a list of paid service providers capable of integrating with edgeless communities.
 
 ## Suggestions accepted:
-- Submissions for edgeless compatible software are best submitted as Issues.
+- Submissions for edgeless compatible software are best submitted as [Issues](https://github.com/Dawn11111111/edgeless.technology/issues).
 - Suggestions will be vetted for edgeless community compatibility and reliable functionality, not limited to, but such as:
   - Configurable home settings for community leaders
   - Focus on personalized, prismatic UX, such as relay views, multiple chats, cross-client/app exploration, etc
